@@ -7,7 +7,7 @@ package com.papadoc.calcengine;
 
 /**
  *
- * @author GP054369
+ * @author papadoc7
  */
 public class CalculateHelper {
     private static final char ADD_SYMBOL = '+';
