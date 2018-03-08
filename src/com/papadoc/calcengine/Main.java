@@ -156,7 +156,7 @@ public class Main {
            System.out.println(helper);
        }
        
-    } //main-psvm
+    } // main-psvm
     
 //    static void useMathEquation() {
 //        MathEquation[] equations = new MathEquation[4];
@@ -175,4 +175,4 @@ public class Main {
 //        return equation;
 //    }
 
-} //class Main
+} // class Main

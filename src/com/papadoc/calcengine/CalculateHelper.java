@@ -54,13 +54,13 @@ public class CalculateHelper {
         // add -> Mathcommand.Add
         
         if(commandString.equalsIgnoreCase(MathCommand.Add.toString()))
-            command = MathCommand.Add;
+            { command = MathCommand.Add; }
         else if(commandString.equalsIgnoreCase(MathCommand.Subtract.toString()))
-            command = MathCommand.Subtract;
+            { command = MathCommand.Subtract; }
         else if(commandString.equalsIgnoreCase(MathCommand.Multiply.toString()))
-            command = MathCommand.Multiply;
+            { command = MathCommand.Multiply; }
         else if(commandString.equalsIgnoreCase(MathCommand.Divide.toString()))
-            command = MathCommand.Divide;
+            { command = MathCommand.Divide; }
         
     }
     
