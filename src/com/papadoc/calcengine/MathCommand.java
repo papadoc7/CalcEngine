@@ -9,7 +9,7 @@ package com.papadoc.calcengine;
  *
  * @author papadoc7
  */
-public enum MathCommand {
+ enum MathCommand {
     Add,
     Subtract,
     Multiply,

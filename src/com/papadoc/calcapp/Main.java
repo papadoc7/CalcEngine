@@ -3,7 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.papadoc.calcengine;
+package com.papadoc.calcapp;
+
+import com.papadoc.calcengine.CalculateHelper;
+import com.papadoc.calcengine.InvalidStatementException;
+import com.papadoc.calcengine.MathEquation;
+import com.papadoc.calcengine.CalculateBase;
+import com.papadoc.calcengine.Adder;
+import com.papadoc.calcengine.Subtracter;
+import com.papadoc.calcengine.Multiplier;
+import com.papadoc.calcengine.Divider;
+
+
 
 /**
  *
@@ -158,7 +169,7 @@ public class Main {
            try {
            helper.process(statement);
            System.out.println(helper);
-           }catch (InvalidStatementException e) {
+           } catch (InvalidStatementException e) {
                System.out.println(e.getMessage());
                if(e.getCause() != null) {
                    System.out.println("  Original exception:  " + e.getCause().getMessage());
@@ -168,21 +179,21 @@ public class Main {
        
     } // main-psvm
     
-//    static void useMathEquation() {
-//        MathEquation[] equations = new MathEquation[4];
-//        equations[0] = new MathEquation('d', 100.0d, 50.0d );
-//        equations[1] = new MathEquation('a', 25.0d, 92.0d );
-//        equations[2] = new MathEquation('s', 225.0d, 17.0d);
-//        equations[3] = new MathEquation('m', 11.0d, 3.0d);        
-//    }
+    static void useMathEquation() {
+        MathEquation[] equations = new MathEquation[4];
+        equations[0] = new MathEquation('d', 100.0d, 50.0d );
+        equations[1] = new MathEquation('a', 25.0d, 92.0d );
+        equations[2] = new MathEquation('s', 225.0d, 17.0d);
+        equations[3] = new MathEquation('m', 11.0d, 3.0d);        
+    }
 
-//    public static MathEquation create(double leftVal, double rightVal, char opCode) {
-//        MathEquation equation = new MathEquation();
-//        equation.setLeftVal(leftVal);
-//        equation.setRightVal(rightVal);
-//        equation.setOpCode(opCode);
-//
-//        return equation;
-//    }
+    public static MathEquation create(double leftVal, double rightVal, char opCode) {
+        MathEquation equation = new MathEquation();
+        equation.setLeftVal(leftVal);
+        equation.setRightVal(rightVal);
+        equation.setOpCode(opCode);
+
+        return equation;
+    }
 
 } // class Main
