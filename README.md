@@ -1,3 +1,3 @@
 # CalcEngine
 
-Example of a CalcEngine
+An example of a CalcEngine
