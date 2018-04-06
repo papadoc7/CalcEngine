@@ -9,38 +9,25 @@ package com.papadoc.calcengine;
  *
  * @author papadoc7
  */
-public class Adder extends CalculateBase implements MathProcessing{
-    public Adder(){}
-    public Adder (double leftVal, double rightVal){
-        super(leftVal, rightVal);
-    }
-    
-    @Override
-    public void calculate(){
-        double value = getLeftVal() + getRightVal();
-        setResult(value);
-    }
+public class PowerOf implements MathProcessing{
 
     @Override
     public String getKeyword() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return "add";
+        return "power";
     }
 
     @Override
     public char getSymbol() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return '+';
+        return '^';
     }
 
     @Override
     public double doCalculation(double leftVal, double rightVal) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        setLeftVal(leftVal);
-        setRightVal(rightVal);
-        calculate();
-        
-        return getResult();
+        return Math.pow(leftVal, rightVal);
     }
+    
     
 }

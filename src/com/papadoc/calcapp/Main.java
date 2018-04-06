@@ -13,6 +13,9 @@ import com.papadoc.calcengine.Adder;
 import com.papadoc.calcengine.Subtracter;
 import com.papadoc.calcengine.Multiplier;
 import com.papadoc.calcengine.Divider;
+import com.papadoc.calcengine.DynamicHelper;
+import com.papadoc.calcengine.MathProcessing;
+import com.papadoc.calcengine.PowerOf;
 
 
 
@@ -153,8 +156,39 @@ public class Main {
 
        //useMathEquation(;
        //useCalculatorBase();
+       //useCalculateHelper();
        
        String[] statements = {
+           "add 25.0 92.0",     // 25.0 + 92.0 = 117.0
+           "power 5.0 2.0"     // 5.0 ^ 2.0 = 25.0
+       };
+       
+       DynamicHelper helper = new DynamicHelper(new MathProcessing[] {
+           new Adder(),
+           new PowerOf()
+       });
+       for (String statement:statements) {
+           String output = helper.process(statement);
+           System.out.println(output);
+       }
+       
+//       CalculateHelper helper = new CalculateHelper();
+//       for(String statement:statements) {
+//           try {
+//           helper.process(statement);
+//           System.out.println(helper);
+//           } catch (InvalidStatementException e) {
+//               System.out.println(e.getMessage());
+//               if(e.getCause() != null) {
+//                   System.out.println("  Original exception:  " + e.getCause().getMessage());
+//               }
+//           }
+//       }
+       
+    } // main-psvm
+    
+    static void useCalculateHelper() {
+        String[] statements = {
            "add 1.0", // Error: incorrect number of values
            "add xx 25.0", // Error: non-numeric data
            "addX 0.0 0.0", // Error: invalid command
@@ -163,21 +197,7 @@ public class Main {
            "subtract 225.0 17.0", // 225.0 - 17.0 = 108.0
            "multiply 11.0 3.0", // 11.0 * 3.0 = 33.0
        };
-       
-       CalculateHelper helper = new CalculateHelper();
-       for(String statement:statements) {
-           try {
-           helper.process(statement);
-           System.out.println(helper);
-           } catch (InvalidStatementException e) {
-               System.out.println(e.getMessage());
-               if(e.getCause() != null) {
-                   System.out.println("  Original exception:  " + e.getCause().getMessage());
-               }
-           }
-       }
-       
-    } // main-psvm
+    }
     
     static void useMathEquation() {
         MathEquation[] equations = new MathEquation[4];
