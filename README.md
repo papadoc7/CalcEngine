@@ -1,3 +1,3 @@
 # CalcEngine
 
-CalcEngine with Java.
+CalcEngine example with Java.
