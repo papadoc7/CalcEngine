@@ -1,3 +1,3 @@
 # CalcEngine
 
-An example of a CalcEngine in Java language.
+CalcEngine with Java.
